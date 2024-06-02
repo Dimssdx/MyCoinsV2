@@ -1,38 +1,44 @@
 package com.example.mycoinsv1
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class TambahTabungan : AppCompatActivity() {
+    private lateinit var titleEditText: EditText
+    private lateinit var descriptionEditText: EditText
+    private lateinit var targetEditText: EditText
+    private lateinit var addButton: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_tambah_tabungan)
         supportActionBar?.hide()
 
-        btn_back2()
-        btn_tambahkan_tabungan()
+        titleEditText = findViewById(R.id.edt_judul_tabungan)
+        descriptionEditText = findViewById(R.id.edt_keterangan)
+        targetEditText = findViewById(R.id.edt_target)
+        addButton = findViewById(R.id.btnTambahkanTabungan)
+
+        btnBackListener()
+        btnTambahTabunganListener()
     }
 
-    private fun btn_back2() {
+    private fun btnBackListener() {
         val btnBack2 = findViewById<ImageButton>(R.id.btn_back2)
         btnBack2.setOnClickListener {
-            val intent = Intent(this, Dashboard::class.java)
-            startActivity(intent)
+            finish()
         }
     }
 
-    private fun btn_tambahkan_tabungan() {
-        val btnTambahkanTabungan = findViewById<Button>(R.id.btnTambahkanTabungan)
-        btnTambahkanTabungan.setOnClickListener {
-            val intent = Intent(this, Tabungan::class.java)
-            startActivity(intent)
+    private fun btnTambahTabunganListener() {
+        addButton.setOnClickListener {
+            // Implementasi penyimpanan data tabungan baru
+            finish()
         }
     }
 }
