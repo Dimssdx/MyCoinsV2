@@ -19,22 +19,7 @@ class Tabungan : AppCompatActivity() {
         supportActionBar?.hide()
 
         btn_back3()
-
-        Terkumpul = findViewById(R.id.terkumpul)
-        Nominal = findViewById(R.id.nominal)
-        btnTabung = findViewById<ImageButton>(R.id.btnTambahkanTabungan)
-
-        btnTabung.setOnClickListener {
-            val nominalStr = Nominal.text.toString()
-            if (nominalStr.isNotEmpty()) {
-                val nominal = nominalStr.toInt()
-                var totalTerkumpul = nominal
-                Terkumpul.setText(totalTerkumpul.toString())
-                Nominal.text.clear()
-            }
-        }
     }
-
     private fun btn_back3() {
         val btnBack3 = findViewById<ImageButton>(R.id.btn_back3)
         btnBack3.setOnClickListener {
@@ -42,7 +27,6 @@ class Tabungan : AppCompatActivity() {
             startActivity(intent)
         }
     }
-}
 }
 
 
