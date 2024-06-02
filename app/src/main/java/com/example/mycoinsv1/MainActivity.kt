@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
+//Mendefinisikan kelas MainActivity yang merupakan turunan dari AppCompatActivity
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,4 +27,6 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+    //Mendefinisikan MainActivity, menyetel tampilan dari layout activity_main, menyembunyikan ActionBar,
+// dan mengatur listener pada tombol "Menabung" yang membuka Dashboard ketika diklik.
 }

@@ -5,8 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/background">
+    android:background="@color/background"
+    tools:context=".MainActivity">
 
     <!-- Background Top -->
     <View
@@ -14,9 +14,9 @@
         android:layout_width="0dp"
         android:layout_height="200dp"
         android:background="@drawable/vector"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Image in the Center -->
     <ImageView
@@ -33,6 +33,7 @@
         android:id="@+id/textViewTitle"
         android:layout_width="305dp"
         android:layout_height="70dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/poppins_bold"
         android:padding="1dp"
         android:text="Bingung untuk mengatasi masalah keuangan dan ingin memulai untuk menabung mulai dari sekarang? MyCoins akan Membantu"
@@ -41,21 +42,20 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageView"
-        android:layout_marginTop="10dp"/>
+        app:layout_constraintTop_toBottomOf="@id/imageView" />
 
     <!-- Subtitle Text -->
     <TextView
         android:id="@+id/textViewSubtitle"
         android:layout_width="307dp"
         android:layout_height="42dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/poppins_semibold"
         android:padding="1dp"
         android:text="Mulai menabung dan atur tabungan mu dengan menekan tombol dibawah ini"
         android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textSize="14sp"
-        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textViewTitle" />
@@ -65,14 +65,14 @@
         android:id="@+id/buttonSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Menabung"
-        android:fontFamily="@font/poppins_semibold"
-        app:layout_constraintTop_toBottomOf="@id/textViewSubtitle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="40dp"
-        android:textColor="@android:color/white"
+        android:background="@drawable/button_shape"
+        android:fontFamily="@font/poppins_semibold"
         android:paddingHorizontal="40dp"
-        android:background="@drawable/button_shape"/>
+        android:text="Menabung"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewSubtitle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -27,7 +27,7 @@ class Dashboard : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        // Data dummy
+        // membuat dan menampilkan data dummy
         if (savingsList.isEmpty()) {
             savingsList.add(Saving("Liburan", "Tabungan untuk liburan akhir tahun", 5000000, 1000000))
             savingsList.add(Saving("Gadget Baru", "Tabungan untuk membeli gadget baru", 3000000, 500000))
@@ -39,7 +39,9 @@ class Dashboard : AppCompatActivity() {
 
     private fun displaySavings() {
         savingsContainer.removeAllViews()
+        //menampilkan daftar tabungan di savingsContainer.
         for (saving in savingsList) {
+            //
             val savingView = LayoutInflater.from(this).inflate(R.layout.item_saving, savingsContainer, false)
             val titleTextView = savingView.findViewById<TextView>(R.id.titleTextView)
             val descriptionTextView = savingView.findViewById<TextView>(R.id.descriptionTextView)

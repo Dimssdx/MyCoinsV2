@@ -26,6 +26,7 @@ class TambahTabungan : AppCompatActivity() {
 
         btnBackListener()
         btnTambahTabunganListener()
+        //variabel btn back dan tambahtabungan
     }
 
     private fun btnBackListener() {
@@ -34,6 +35,7 @@ class TambahTabungan : AppCompatActivity() {
             finish()
         }
     }
+    //function button back
 
     private fun btnTambahTabunganListener() {
         addButton.setOnClickListener {
@@ -41,4 +43,5 @@ class TambahTabungan : AppCompatActivity() {
             finish()
         }
     }
+    //function button tambahkan tabungn
 }
